@@ -11,18 +11,19 @@ angular
       $ctrl.ajouterAListe = function() {
         $ctrl.maListe.push($ctrl.maVariable);
       };
-
-  /*    $ctrl.suprimmerAListe = function($index) {
+/*
+    $ctrl.suprimmerAListe = function($index) {
         $ctrl.maListe.splice($index,1);
       };
 */
-$ctrl.suprimmerAListe = function(el) {
-     $ctrl.maListe.splice($ctrl.maListe.indexOf(el),1);
-   };
+      $ctrl.suprimmerAListe = function(el) {
+           $ctrl.maListe.splice($ctrl.maListe.indexOf(el),1);
+         };
 
     }
   });
 
 
 // indexOf():
-//splice(index,1);
+// splice(index,1);
+// json.stringify({hello:{text:"world"}});
