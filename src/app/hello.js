@@ -36,6 +36,8 @@ angular
       };
 */
       $ctrl.maListe = $ctrl.recuperer();
+
+      // $ctrl.maListe = Save.load();
     }
   });
 
