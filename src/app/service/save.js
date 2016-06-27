@@ -6,4 +6,11 @@ angular
         var toBeStored = JSON.stringify(toBeSaved);
         localStorage.setItem('saved', toBeStored);
       };
+      Save.load = function () {
+        var unString = localStorage.getItem('saved');
+        if (unString) {
+          return JSON.parse(unString);
+        }
+        return [];
+      };
     });
