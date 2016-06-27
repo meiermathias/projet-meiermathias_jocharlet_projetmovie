@@ -3,7 +3,6 @@
     <h1>Hello World!</h1>
   </div>
 </div>
-
 <div class="row">
   <div class="col-md6">
     <div class="form-group">
@@ -16,8 +15,16 @@
         <p>
           {{$ctrl.maVariable | capitalize}}
         </p>
+        <p>
+          {{$ctrl.maListe}}
+        </p>
         <ul>
-          <li ng-repeat="el in $ctrl.maListe">{{el}}</li>
+          <li ng-repeat="el in $ctrl.maListe track by $index">
+            <h1 ng-if="$index == $ctrl.maListe.length / 2">Je suis le milieu!</h1>
+            {{$index + 1}} {{el | capitalize}}
+
+          </li>
         </ul>
       </div>
+      <button ng-click="$ctrl.ajouterAListe()" class="btn btn-primary">Ajouter</button>
 </div>

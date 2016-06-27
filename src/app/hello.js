@@ -7,5 +7,9 @@ angular
       var $ctrl = this;
       $ctrl.maListe=['hello','bonjour'];
       $ctrl.maVariable = "Hello";
+
+      $ctrl.ajouterAListe = function () {
+          $ctrl.maListe.push("au revoir");
+      };
     }
   });
