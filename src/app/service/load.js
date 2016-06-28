@@ -1,11 +1,14 @@
-function Load() {
-}
+  function load() {
+    var load = this;
+    load.load = function () {
+      var unString = localStorage.getItem('saved');
+      if (unString) {
+        return JSON.parse(unString);
+      }
+      return [];
+    };
+  }
 
-Load.prototype.getData = function () {
-  return 1 + 2;
-};
-
-angular
-  .module('app')
-  .service('Load', Load);
-
+  angular
+    .module('app')
+    .service('load', load);

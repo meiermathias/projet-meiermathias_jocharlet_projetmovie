@@ -2,20 +2,20 @@ angular
   .module('app')
   .component('home', {
     templateUrl: 'app/home.html',
-    controller: function (Save) {
+    controller: function (Save, load) {
       // Bonne pratique redefinir : var $ctrl = this
       var $ctrl = this;
 
       $ctrl.maVariable = 'Hello';
     // localStorage.removeItem('saved');
-      $ctrl.recuperer = function () {
+     /*  $ctrl.recuperer = function () {
         var unString = localStorage.getItem('saved');
         if (unString) {
           return JSON.parse(unString);
         }
         return [];
       };
-
+*/
       $ctrl.ajouterAListe = function () {
         $ctrl.maListe.push($ctrl.maVariable);
         Save.save($ctrl.maListe);
@@ -35,10 +35,10 @@ angular
         localStorage.setItem('saved', toBeStored);
       };
 */
-      $ctrl.maListe = $ctrl.recuperer();
-
-      // $ctrl.maListe = Save.load();
+      // $ctrl.maListe = $ctrl.recuperer();
+      $ctrl.maListe = load.load();
     }
+
   });
 
 // indexOf():
