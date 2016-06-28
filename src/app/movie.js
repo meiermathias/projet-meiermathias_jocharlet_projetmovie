@@ -1,5 +1,6 @@
-function movieController() {
-  this.text = 'My brand new component!';
+function movieController($stateParams) {
+  var $ctrl = this;
+  $ctrl.text = 'movie : ' + $stateParams.movieId;
 }
 
 angular
@@ -8,4 +9,3 @@ angular
     templateUrl: 'app/movie.html',
     controller: movieController
   });
-

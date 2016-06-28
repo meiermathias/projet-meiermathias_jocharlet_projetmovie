@@ -16,7 +16,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       template: '<home></home>'
     })
     .state('app.movie', {
-      url: '/movie',
+      url: '/movie/:movieId', // fragment url stocké dans movieId
       template: '<movie></movie>'
     });
 }
