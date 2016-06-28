@@ -3,16 +3,19 @@ angular
   .component('home', {
       // localStorage.removeItem('saved');
     templateUrl: 'app/home.html',
-    controller: function (Save, load) {
-      // Bonne pratique redefinir : var $ctrl = this
+    controller: function (Save, load, $http) {
       var $ctrl = this;
+      $http.get('http://amc.ig.he-arc.ch:3003/movie/upcoming?language=fr')
+      .then(function (result) {
+        $ctrl.movies = result.data.results;
+      });
 
       $ctrl.maVariable = 'Hello';
+      $ctrl.maListe = load.load();
 
       $ctrl.ajouterAListe = function () {
         $ctrl.maListe.push($ctrl.maVariable);
         Save.save($ctrl.maListe);
-        // $ctrl.sauvegarder($ctrl.maListe);
       };
 
       $ctrl.suprimmerAListe = function ($index) {
@@ -22,8 +25,5 @@ angular
       $ctrl.suprimmerAListe = function (el) {
         $ctrl.maListe.splice($ctrl.maListe.indexOf(el), 1);
       };
-
-      $ctrl.maListe = load.load();
     }
-
   });
