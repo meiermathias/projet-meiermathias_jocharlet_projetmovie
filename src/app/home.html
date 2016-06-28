@@ -6,14 +6,33 @@
     </div>
   </div>
 </div>
+<!--
 <div class="row">
       <div class="col-md12">
         <ul>
           <li ng-repeat="el in $ctrl.maListe track by $index">
-        <a ui-sref="app.movie({movieId: el})"> {{el | capitalize}} </a> 
+        <a ui-sref="app.movie({movieId: el})"> {{el | capitalize}} </a>
     <span ng-click="$ctrl.suprimmerAListe(el)" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-
           </li>
         </ul>
       </div>
 </div>
+-->
+
+<div class="row">
+      <div class="col-md12">
+        <poster ng-repeat="m in $ctrl.movies" movie="{id:m.id, poster_path:m.poster_path}"></poster>
+      </div>
+</div>
+<!--
+<div class="row">
+      <div class="col-md12">
+        <ul>
+          <li ng-repeat="movie in $ctrl.movies">
+            <a ui-sref="app.movie({movieId: movie.id})">  <img  ng-src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt="Description" /> </a>
+          </li>
+        </ul>
+      </div>
+</div>
+
+-->
