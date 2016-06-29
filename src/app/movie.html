@@ -1,8 +1,10 @@
 <div class="row">
   <div class="col-md-3">
-  <h1>{{$ctrl.title}}</h1>
+ <img onerror="this.src='http://loremflickr.com/185/252/sexygirl'" ng-src="https://image.tmdb.org/t/p/w185/{{$ctrl.movie.poster_path}}" alt="Poster" />
   </div>
   <div class="col-md-9">
-  <h2>{{$ctrl.text}}</h2>
+    <h1>{{$ctrl.movie.title}}</h1>
+    <p><strong>Date de sortie : </strong>{{$ctrl.movie.release_date}}</p>
+    <p><strong>Résumé : </strong>{{$ctrl.movie.overview}}</p>
   </div>
 </div>
