@@ -25,3 +25,12 @@ body {
     width: 5px;
     height: 100px;
 }
+
+.imgPoster{
+	width:185px;
+	height:252px
+}
+
+.thumbnail{
+	height: 480px;
+}
