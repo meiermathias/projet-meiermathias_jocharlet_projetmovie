@@ -12,3 +12,16 @@ body {
 	margin-right:0px;
 	margin-left:0px;
 	}
+
+
+.desc {
+    overflow: hidden;
+    height: 100px;
+		text-overflow: ellipsis;
+}
+.desc:before {
+    content: "";
+    float: left;
+    width: 5px;
+    height: 100px;
+}

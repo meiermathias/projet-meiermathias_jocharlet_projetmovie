@@ -5,9 +5,9 @@
 -->
 
 <div class="poster thumbnail">
-      <a ui-sref="app.movie({movieId: $ctrl.movie.id})"> <img onerror="this.src='http://static.adzerk.net/Advertisers/56c98ff2ade9414bb75b7dda3a9baaca.png'" ng-src="http://image.tmdb.org/t/p/w185/{{$ctrl.movie.poster_path}}" alt="Description" /></a>
+      <a ui-sref="app.movie({movieId: $ctrl.movie.id, movieTitle: $ctrl.movie.title })"> <img onerror="this.src='http://loremflickr.com/185/252/sexygirl'" ng-src="https://image.tmdb.org/t/p/w185/{{$ctrl.movie.poster_path}}" alt="Description" /></a>
       <div class="caption">
         <h3>{{$ctrl.movie.title}}</h3>
-        <p>{{$ctrl.movie.overview}}</p>
+        <p class="desc">{{$ctrl.movie.overview}}</p>
       </div>
     </div>

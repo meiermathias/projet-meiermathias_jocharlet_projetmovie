@@ -5,7 +5,7 @@ angular
     templateUrl: 'app/home.html',
     controller: function (Save, load, $http) {
       var $ctrl = this;
-      $http.get('http://amc.ig.he-arc.ch:3003/movie/upcoming?language=fr')
+      $http.get('https://amc.ig.he-arc.ch/tmdb/movie/upcoming?language=fr')
       .then(function (result) {
         $ctrl.movies = result.data.results;
       });
