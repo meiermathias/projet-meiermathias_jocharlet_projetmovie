@@ -15,6 +15,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       template: '<home></home>'
     })
+    .state('app.favorit', {
+      url: '/favorit',
+      template: '<favorit></favorit>'
+    })
     .state('app.movie', {
       url: '/movie/:movieId', // fragment url stocké dans movieId
       template: '<movie></movie>'
