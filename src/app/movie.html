@@ -4,6 +4,8 @@
   </div>
   <div class="col-md-9">
     <h1>{{$ctrl.movie.title}}</h1>
+    <h5>{{$ctrl.movie.original_title}}</h5>
+    <p><strong>Genre :</strong> <span ng-repeat="genre in $ctrl.movie.genres">{{genre.name}} </span></p>
     <p><strong>Date de sortie : </strong>{{$ctrl.movie.release_date}}</p>
     <p><strong>Résumé : </strong>{{$ctrl.movie.overview}}</p>
   </div>
