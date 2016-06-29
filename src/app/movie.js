@@ -1,6 +1,10 @@
-function movieController($stateParams) {
+function movieController($stateParams, $http) {
   var $ctrl = this;
-  $ctrl.text = 'movie : ' + $stateParams.movieId;
+  $ctrl.text = $stateParams.movieId;
+  $http.get('https://amc.ig.he-arc.ch/tmdb/movie/' + $stateParams.movieId + '?language=fr')
+  .then(function (result) {
+    $ctrl.movie = result.data;
+  });
 }
 
 angular
