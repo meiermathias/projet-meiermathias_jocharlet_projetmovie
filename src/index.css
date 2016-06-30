@@ -6,7 +6,6 @@ body {
   	background-color: #333639;
 }
 
-
 .row{
 	padding-top:10px;
 	padding-bottom:10px;
@@ -14,12 +13,12 @@ body {
 	margin-left:0px;
 	}
 
-
 .desc {
     overflow: hidden;
     height: 100px;
 	text-overflow: ellipsis;
 }
+
 .desc:before {
     content: "";
     float: left;
@@ -34,7 +33,7 @@ body {
 }
 
 .thumbnail{
-	height: 480px;
+	height: 500px;
 	background-color: #393C3F;
 	border-color: dimgrey;
 }

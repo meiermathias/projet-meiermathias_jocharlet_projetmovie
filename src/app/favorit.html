@@ -1,3 +1,6 @@
-<div class="component">
-  <h2>{{$ctrl.text}}</h2>
+<h1>Vos favoris</h1>
+<div ng-repeat="movie in $ctrl.maListe track by $index" ng-if="$index % 3 == 0" class="row">
+    <div class="col-md-4"><poster movie="{index:$index, id:$ctrl.maListe[$index].id, poster_path:$ctrl.maListe[$index].poster, overview:$ctrl.maListe[$index].overview, title:$ctrl.maListe[$index].title}"></poster></div>
+    <div class="col-md-4" ng-if="$ctrl.maListe.length > ($index + 1)"><poster movie="{id:$ctrl.maListe[$index+1].id, poster_path:$ctrl.maListe[$index+1].poster, overview:$ctrl.maListe[$index+1].overview, title:$ctrl.maListe[$index+1].title}"></poster></div>
+    <div class="col-md-4"ng-if="$ctrl.maListe.length > ($index + 2)"><poster movie="{id:$ctrl.maListe[$index+2].id, poster_path:$ctrl.maListe[$index+2].poster, overview:$ctrl.maListe[$index+2].overview, title:$ctrl.maListe[$index+2].title}"></poster></div>
 </div>
