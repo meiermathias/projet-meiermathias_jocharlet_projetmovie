@@ -4,7 +4,8 @@ angular
       var Save = this;
       Save.save = function (toBeSaved) {
         var toBeStored = JSON.stringify(toBeSaved);
-        localStorage.setItem(toBeSaved.id, toBeStored);
+        // var idStored = JSON.stringify(toBeSaved.id);
+        localStorage.setItem('saved', toBeStored);
       };
       Save.load = function () {
         var unString = localStorage.getItem('saved');
