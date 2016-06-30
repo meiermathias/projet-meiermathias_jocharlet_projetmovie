@@ -1,45 +1,53 @@
 <!doctype html>
 <html>
-  <head>
-    <base href="/projet-meiermathias_jocharlet_projetmovie/">
-    <meta charset="utf-8">
-    <title>FountainJS</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="styles/vendor-dd9beb798e.css">
+<head>
+  <base href="/projet-meiermathias_jocharlet_projetmovie/">
+  <meta charset="utf-8">
+  <title>Projet Movie Meier Mathias &amp; Jo Charlet_</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="styles/app-b391ab1ad9.css">
-    <link rel="stylesheet" type="text/css" href="https://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css">
-  </head>
+  <link rel="stylesheet" href="styles/vendor-dd9beb798e.css">
+
+  <link rel="stylesheet" href="styles/app-8c8493a0e5.css">
+  <link rel="stylesheet" type="text/css" href="https://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css">
+</head>
 
 
-  <body ng-app="app">
-      <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<body ng-app="app">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" ui-sref="app.home">Movie</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a ui-sref="app.home">Home</a></li>
-            <li><a ui-sref="app.favorit">Favoris</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <!-- <a class="navbar-brand" ui-sref="app.home">Movie</a> -->
+        <img class="navbar-brand" ui-sref="app.home" src="logo.png" alt="logo video">
       </div>
-    </nav>
-    <div class="container">
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a ui-sref="app.home" aria-label="Left Align">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li><a ui-sref="app.favorit">Favoris</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container">
     <ui-view></ui-view>
   </div>
-  </body>
+</body>
 
-  <script src="scripts/vendor-bc2c5527eb.js"></script>
+<script src="scripts/vendor-bc2c5527eb.js"></script>
 
-  <script src="scripts/app-c21effae97.js"></script>
+<script src="scripts/app-e7a756af68.js"></script>
+
 </html>
