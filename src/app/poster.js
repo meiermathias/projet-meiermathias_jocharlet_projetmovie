@@ -10,7 +10,7 @@ angular
 
       $ctrl.ajouterAListe = function ($id, $title, $overview, $poster) {
         var newItem = {id: $id, title: $title, overview: $overview, poster: $poster};
-          data.toggle(newItem);
+        data.toggle(newItem);
       };
 
       $ctrl.suprimmerAListe = function ($index) {

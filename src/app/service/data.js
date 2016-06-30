@@ -5,6 +5,7 @@ angular
       data.liste = Save.load();
 
       data.toggle = function (item) {
+        data.liste = Save.load();
         if (data.hasMovie(item)) {
           Save.remove(item);
         } else {
