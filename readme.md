@@ -62,3 +62,5 @@ Réalisé 2x par jours des "STAND-UP MEETINGS" pour savoir l'avancement du proje
 2. Utilisation d'outils de versionning "git"
 3. Utlisation de platforme de partage "gitHub"
 4. Découvertes de nouveaux éditeurs de code "Atom, Visual Studio Code, webStorm"Injection du bon lien de base en fonction de si on se situe sur le projet construit ou non construit (donc pour le deploy)
+
+_Jonathan Charlet, Mathias Meier_
