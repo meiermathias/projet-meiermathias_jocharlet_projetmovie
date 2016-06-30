@@ -1,9 +1,22 @@
 <div class="poster thumbnail">
-  <a ui-sref="app.movie({movieId: $ctrl.movie.id})"> <img class="imgPoster img-thumbnail" onerror="this.src='http://loremflickr.com/185/252/sexygirl'" ng-src="https://image.tmdb.org/t/p/w185{{$ctrl.movie.poster_path}}"
-      alt="Poster" /></a>
-    <button type="button"  ng-click="$ctrl.ajouterAListe($ctrl.movie.id, $ctrl.movie.title,  $ctrl.movie.overview,  $ctrl.movie.poster_path)"  class="btn btn-default" aria-label="Left Align">  <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></button>
-  <div class="caption">
-    <h3>{{$ctrl.movie.title | limitTo: 50 }}{{$ctrl.movie.title.length > 50 ? '...' : ''}}</h3>
-    <p class="desc">{{$ctrl.movie.overview | limitTo: 230 }}{{$ctrl.movie.overview.length > 230 ? '...' : ''}}</p>
+    <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <a ui-sref="app.movie({movieId: $ctrl.movie.id})"> <img class="imgPoster img-thumbnail" onerror="this.src='http://loremflickr.com/185/252/sexygirl'" ng-src="https://image.tmdb.org/t/p/w185{{$ctrl.movie.poster_path}}" alt="Poster" /></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button"  ng-click="$ctrl.ajouterAListe($ctrl.movie.id, $ctrl.movie.title, $ctrl.movie.overview, $ctrl.movie.poster_path)"  class="btn btn-default" aria-label="Left Align">  <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="caption">
+                    <h3>{{$ctrl.movie.title| limitTo: 50 }}{{$ctrl.movie.title.length > 50 ? '...' : ''}}</h3>
+                    <p class="desc">{{$ctrl.movie.overview| limitTo: 230 }}{{$ctrl.movie.overview.length > 230 ? '...' : ''}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
