@@ -8,6 +8,7 @@ angular
         data.liste = Save.load();
         if (data.hasMovie(item)) {
           Save.remove(item);
+          location.reload();
         } else {
           data.liste.push(item);
           Save.save(data.liste);
