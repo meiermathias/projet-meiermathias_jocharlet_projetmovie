@@ -3,15 +3,14 @@ angular
   .module('app')
   .component('poster', {
     templateUrl: 'app/poster.html',
-    controller: function (Save, load) {
+    controller: function (Save, load, data) {
       var $ctrl = this;
       $ctrl.mInput = 'test';
       $ctrl.maListe = load.load();
 
       $ctrl.ajouterAListe = function ($id, $title, $overview, $poster) {
         var newItem = {id: $id, title: $title, overview: $overview, poster: $poster};
-        $ctrl.maListe.push(newItem);
-        Save.save($ctrl.maListe);
+        data.toggle(newItem);
       };
 
       $ctrl.suprimmerAListe = function ($index) {
