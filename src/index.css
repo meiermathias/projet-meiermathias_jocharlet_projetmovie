@@ -27,10 +27,10 @@ body {
 }
 
 .imgPoster{
-	width:185px;
-	height:252px
+	min-width:185px;
+	min-height:252px
 }
 
 .thumbnail{
-	height: 480px;
+	height: 500px;
 }

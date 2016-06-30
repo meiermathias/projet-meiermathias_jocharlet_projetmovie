@@ -3,18 +3,7 @@
 
   </div>
 </div>
-<!--
-<div class="row">
-      <div class="col-md12">
-        <ul>
-          <li ng-repeat="el in $ctrl.maListe track by $index">
-        <a ui-sref="app.movie({movieId: el})"> {{el | capitalize}} </a>
-    <span ng-click="$ctrl.suprimmerAListe(el)" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-          </li>
-        </ul>
-      </div>
-</div>
--->
+
 <!--
 <div class="row">
       <div class="col-md12">
@@ -22,7 +11,6 @@
       </div>
 </div>
 -->
-
     <div ng-repeat="m in $ctrl.movies" ng-if="$index % 3 == 0" class="row">
         <div class="col-md-4"><poster movie="{index:$index, id:$ctrl.movies[$index].id, poster_path:$ctrl.movies[$index].poster_path, overview:$ctrl.movies[$index].overview, title:$ctrl.movies[$index].title}"></poster></div>
         <div class="col-md-4" ng-if="$ctrl.movies.length > ($index + 1)"><poster movie="{id:$ctrl.movies[$index+1].id, poster_path:$ctrl.movies[$index+1].poster_path, overview:$ctrl.movies[$index+1].overview, title:$ctrl.movies[$index+1].title}"></poster></div>
