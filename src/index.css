@@ -54,10 +54,16 @@ body {
 	border-color: dimgrey;
 }
 
-.glyphicon-home{
-	background-color: #212427;
-}
-
 a:hover{
 	color: dimgrey;
+	border-color: #212427;
+}
+
+.homeMenu {
+	background-color: #212427;
+	border-color: #212427;
+}
+
+.homeMenu:hover {
+	border-color: #212427;
 }
