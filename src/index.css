@@ -28,7 +28,7 @@ body {
 
 .imgPoster{
 	width:185px;
-	height:252px;
+	height:252px !important;
 	margin-top:20px;
 }
 
