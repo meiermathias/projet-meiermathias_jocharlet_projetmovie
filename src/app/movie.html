@@ -6,8 +6,29 @@
     <h1>{{$ctrl.movie.title}}</h1>
     <h5>{{$ctrl.movie.original_title}}</h5>
     <p><strong>Genre :</strong> <span ng-repeat="genre in $ctrl.movie.genres">{{genre.name}} </span></p>
-    <p><strong>Date de sortie : </strong>{{$ctrl.movie.release_date}}</p>
+
+    <p>
+      <strong>Date de sortie : </strong> <br>
+      <span ng-repeat="result in $ctrl.movieReleaseDate.results">
+        <span ng-repeat="rdate in result.release_dates" ng-if="result.iso_3166_1 == 'FR'">
+          <flag country="fr" size="16"></flag>
+          {{rdate.release_date | limitTo:10}} <br>
+        </span>
+        <span ng-repeat="rdate in result.release_dates" ng-if="result.iso_3166_1 == 'US'">
+          <flag country="us" size="16"></flag>
+          {{rdate.release_date | limitTo:10}}  <br>
+        </span>
+        <span ng-repeat="rdate in result.release_dates" ng-if="result.iso_3166_1 == 'DE'">
+          <flag country="de" size="16"></flag>
+          {{rdate.release_date | limitTo:10}} <br>
+        </span>
+        <span ng-repeat="rdate in result.release_dates" ng-if="result.iso_3166_1 == 'IT'">
+          <flag country="it" size="16"></flag>
+          {{rdate.release_date | limitTo:10}} 
+        </span>
+      </span>
+    </p>
     <p><strong>Résumé : </strong>{{$ctrl.movie.overview}}</p>
-    <flag country="us" size="16"></flag>
   </div>
 </div>
+<!-- {{result.iso_3166_1}} -->

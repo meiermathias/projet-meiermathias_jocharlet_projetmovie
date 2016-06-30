@@ -5,6 +5,10 @@ function movieController($stateParams, $http) {
   .then(function (result) {
     $ctrl.movie = result.data;
   });
+  $http.get('https://amc.ig.he-arc.ch/tmdb/movie/' + $stateParams.movieId + '/release_dates')
+  .then(function (result) {
+    $ctrl.movieReleaseDate = result.data;
+  });
 }
 
 angular
