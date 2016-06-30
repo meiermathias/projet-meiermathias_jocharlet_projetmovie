@@ -1,7 +1,4 @@
-<div class="row">
-  <div class="jumbotron">
-  </div>
-</div>
+<h1>Film à venir</h1>
     <div ng-repeat="m in $ctrl.movies | filter:$ctrl.searchText track by $index " ng-if="$index % 3 == 0" class="row">
         <div class="col-md-4"><poster movie="{index:$index, id:$ctrl.movies[$index].id, poster_path:$ctrl.movies[$index].poster_path, overview:$ctrl.movies[$index].overview, title:$ctrl.movies[$index].title}"></poster></div>
         <div class="col-md-4" ng-if="$ctrl.movies.length > ($index + 1)"><poster movie="{id:$ctrl.movies[$index+1].id, poster_path:$ctrl.movies[$index+1].poster_path, overview:$ctrl.movies[$index+1].overview, title:$ctrl.movies[$index+1].title}"></poster></div>
