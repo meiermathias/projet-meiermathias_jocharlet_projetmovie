@@ -67,3 +67,9 @@ a:hover{
 .homeMenu:hover {
 	border-color: #212427;
 }
+
+.btn{
+	border-color: dimgrey;
+	background-color: #212427;
+	color: dimgrey;
+}
