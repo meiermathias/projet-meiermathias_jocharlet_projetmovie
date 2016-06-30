@@ -1,72 +1,81 @@
 <!doctype html>
 <html>
-  <head>
-    <!-- @ifdef DIST -->
-    <base href="/projet-meiermathias_jocharlet_projetmovie/">
-    <!-- @endif -->
-    <!-- @ifndef DIST -->
-    <base href="/">
-    <!-- @endif -->
-    <meta charset="utf-8">
-    <title>Projet Movie Meier Mathias &amp; Jo Charlet_</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
 
-    <!-- build:css({.tmp,src}) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+<head>
+  <!-- @ifdef DIST -->
+  <base href="/projet-meiermathias_jocharlet_projetmovie/">
+  <!-- @endif -->
+  <!-- @ifndef DIST -->
+  <base href="/">
+  <!-- @endif -->
+  <meta charset="utf-8">
+  <title>Projet Movie Meier Mathias &amp; Jo Charlet_</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
 
-    <!-- build:css({.tmp,src}) styles/app.css -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="index.css">
-    <!-- endinject -->
-    <!-- endbuild -->
-    <link rel="stylesheet" type="text/css" href="https://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
-  </head>
+  <!-- build:css({.tmp,src}) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp,src}) styles/app.css -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="index.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+  <link rel="stylesheet" type="text/css" href="https://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+</head>
 
 
-  <body ng-app="app">
-      <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<body ng-app="app">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" ui-sref="app.home">Movie</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav  navbar-right">
-            <li><a ui-sref="app.home">Home</a></li>
-            <li><a ui-sref="app.favorit">Favoris</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <!-- <a class="navbar-brand" ui-sref="app.home">Movie</a> -->
+        <img class="navbar-brand" ui-sref="app.home" src="logo.png" alt="logo video">
       </div>
-    </nav>
-    <div class="container">
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav  navbar-right">
+          <li>
+            <a ui-sref="app.home" aria-label="Left Align">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li><a ui-sref="app.favorit">Favoris</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container">
     <ui-view></ui-view>
   </div>
-  </body>
+</body>
 
-  <!-- build:js({.tmp,src}) scripts/vendor.js -->
-  <!-- bower:js -->
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
+<!-- build:js({.tmp,src}) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-  <!-- build:js({.tmp,src}) scripts/app.js -->
-  <!-- inject:js -->
-  <script src="index.js"></script>
-  <script src="routes.js"></script>
-  <!-- endinject -->
-  <!-- inject:partials -->
-  <!-- angular templates will be automatically converted in js and inserted here -->
-  <!-- endinject -->
-  <!-- endbuild -->
+<!-- build:js({.tmp,src}) scripts/app.js -->
+<!-- inject:js -->
+<script src="index.js"></script>
+<script src="routes.js"></script>
+<!-- endinject -->
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+
 </html>

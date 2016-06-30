@@ -1,8 +1,9 @@
 body {
-		font-family:Segoe UI,Tahoma,Verdana,Arial,sans-serif;
-	color:#7c7c7c;
-	  padding-top: 50px;
-  padding-bottom: 20px;
+	font-family:Segoe UI,Tahoma,Verdana,Arial,sans-serif;
+	color: #F2F2F2;
+	padding-top: 50px;
+  	padding-bottom: 20px;
+  	background-color: #333639;
 }
 
 
@@ -17,7 +18,7 @@ body {
 .desc {
     overflow: hidden;
     height: 100px;
-		text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }
 .desc:before {
     content: "";
@@ -28,9 +29,36 @@ body {
 
 .imgPoster{
 	width:185px;
-	height:252px
+	height:252px;
+	margin-top:20px;
 }
 
 .thumbnail{
 	height: 480px;
+	background-color: #393C3F;
+	border-color: dimgrey;
+}
+
+.thumbnail .caption {
+    color: #F2F2F2;
+}
+
+.navbar {
+	background-color: #212427;
+}
+
+.jumbotron{
+	background-color: #212427;
+}
+
+.navbar-default{
+	border-color: dimgrey;
+}
+
+.glyphicon-home{
+	background-color: #212427;
+}
+
+a:hover{
+	color: dimgrey;
 }
