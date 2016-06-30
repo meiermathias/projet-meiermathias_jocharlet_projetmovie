@@ -3,29 +3,8 @@
  <label>Recherche: <input ng-model="$ctrl.searchText"></label>
   </div>
 </div>
-
-<!--
-<div class="row">
-      <div class="col-md12">
-        <poster ng-repeat="m in $ctrl.movies" movie="{id:m.id, poster_path:m.poster_path}"></poster>
-      </div>
-</div>
--->
     <div ng-repeat="m in $ctrl.movies | filter:$ctrl.searchText track by $index " ng-if="$index % 3 == 0" class="row">
         <div class="col-md-4"><poster movie="{index:$index, id:$ctrl.movies[$index].id, poster_path:$ctrl.movies[$index].poster_path, overview:$ctrl.movies[$index].overview, title:$ctrl.movies[$index].title}"></poster></div>
         <div class="col-md-4" ng-if="$ctrl.movies.length > ($index + 1)"><poster movie="{id:$ctrl.movies[$index+1].id, poster_path:$ctrl.movies[$index+1].poster_path, overview:$ctrl.movies[$index+1].overview, title:$ctrl.movies[$index+1].title}"></poster></div>
         <div class="col-md-4"ng-if="$ctrl.movies.length > ($index + 2)"><poster movie="{id:$ctrl.movies[$index+2].id, poster_path:$ctrl.movies[$index+2].poster_path, overview:$ctrl.movies[$index+2].overview, title:$ctrl.movies[$index+2].title}"></poster></div>
     </div>
-
-<!--
-<div class="row">
-      <div class="col-md12">
-        <ul>
-          <li ng-repeat="movie in $ctrl.movies">
-            <a ui-sref="app.movie({movieId: movie.id})">  <img  ng-src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt="Description" /> </a>
-          </li>
-        </ul>
-      </div>
-</div>
-
--->
